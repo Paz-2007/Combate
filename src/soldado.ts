@@ -6,9 +6,10 @@ export class Soldado {
         this.nombre = nombre;
         this.vida = 1
     }
-    disparar(): void {
+    disparar(objetivo: Soldado): void {
+        objetivo.recibirDisparo();
     }
-    recbirDisparo(): void {
+    recibirDisparo(): void {
         this.vida -= 1;
     }
 }

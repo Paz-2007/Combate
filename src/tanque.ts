@@ -1,3 +1,5 @@
+import type { Soldado } from "./soldado.js";
+
 export class tanque {
     id: number;
     vida: number;
@@ -6,9 +8,10 @@ export class tanque {
         this.id = id;
         this.vida = 10;
     }
-    disparar(): void {
+    disparar(objetivo: Soldado): void {
+        objetivo.recibirDisparo();
     }
-    recbirDisparo(): void {
+    recibirDisparo(): void {
         this.vida -= 1;
     }
 }
