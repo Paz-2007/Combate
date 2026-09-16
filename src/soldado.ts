@@ -1,15 +1,15 @@
 export class Soldado {
-    nombre: string;
-    vida: number;
+    private _nombre: string;
+    private _vida: number;
 
     constructor(nombre: string) {
-        this.nombre = nombre;
-        this.vida = 1
+        this._nombre = nombre;
+        this._vida = 1;
     }
     disparar(objetivo: Soldado): void {
         objetivo.recibirDisparo();
     }
     recibirDisparo(): void {
-        this.vida -= 1;
+        this._vida -= 1;
     }
 }

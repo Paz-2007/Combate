@@ -1,17 +1,18 @@
-import type { Soldado } from "./soldado.js";
+
 
 export class tanque {
-    id: number;
-    vida: number;
+    private _id: number;
+    private _vida: number;
 
     constructor(id: number) {
-        this.id = id;
-        this.vida = 10;
+        this._id = id;
+        this._vida = 10;
     }
-    disparar(objetivo: Soldado): void {
+    disparar(objetivo: tanque): void {
         objetivo.recibirDisparo();
     }
     recibirDisparo(): void {
-        this.vida -= 1;
+        this._vida -= 1;
     }
 }
+

@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
 
-import { Soldado } from "../src/soldado.js";
+import { Soldado } from "../src/Soldado.js";
 
 describe("Soldado", () => {
     test("Cuando un soldado dispara a otro, el otro pierde una vida", () => {
