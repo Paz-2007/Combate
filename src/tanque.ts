@@ -1,18 +1,29 @@
 
 
 export class tanque {
-    private _id: number;
+    private _nombre: string;
     private _vida: number;
+    private _estaVivo: boolean;
 
-    constructor(id: number) {
-        this._id = id;
-        this._vida = 10;
+    constructor(nombre: string) {
+        this._nombre = nombre;
+        this._vida = 2;
+        this._estaVivo = true;
     }
+
+      
+    get estaVivo(): boolean {
+        return this._estaVivo;
+    }
+
     disparar(objetivo: tanque): void {
         objetivo.recibirDisparo();
     }
     recibirDisparo(): void {
         this._vida -= 1;
+        if (this._vida <= 0) {
+            this._estaVivo = false;
+        }
     }
 }
 

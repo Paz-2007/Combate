@@ -11,9 +11,7 @@ describe("Soldado"), () => {
         //se crea un soldado con nombre y vida inicial de 1
         soldado2.disparar(soldado1);
         //el soldado 2 dispara al soldado 1
-        soldado1.estaVivo(soldado1);
-        //se verifica si el soldado 1 esta vivo
-        expect(soldado1.estaVivo(soldado1)).toBe(false);
+        expect(soldado1.estaVivo).toBe(false);
     });
 }
 
