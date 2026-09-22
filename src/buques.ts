@@ -9,9 +9,11 @@ export class buque {
         this._vida =3;
         this._estaVivo = true;
     }
+
     disparar(objetivo: buque): void {
         objetivo.recibirDisparo();
     }
+    
     recibirDisparo(): void {
         this._vida -= 1;
         if (this._vida <= 0) {

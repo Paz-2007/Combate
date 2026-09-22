@@ -19,6 +19,7 @@ export class tanque {
     disparar(objetivo: tanque): void {
         objetivo.recibirDisparo();
     }
+    
     recibirDisparo(): void {
         this._vida -= 1;
         if (this._vida <= 0) {

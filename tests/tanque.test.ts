@@ -11,6 +11,11 @@ describe("Tanque"), () => {
         //se crea un tanque con nombre y vida inicial de 2
         var tanque2 = new tanque("Tanque 2");
         //se crea un tanque con nombre y vida inicial de 2
+        expect (tanque1.estaVivo).toBe(true);
+        //el tanque 1 esta vivo al inicio
+        expect (tanque2.estaVivo).toBe(true);
+        //el tanque 2 esta vivo al inicio
+        
         tanque2.disparar(tanque1);
         //el tanque 2 dispara al tanque 1
         expect(tanque1.estaVivo).toBe(true);

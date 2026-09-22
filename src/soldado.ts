@@ -14,6 +14,7 @@ export class Soldado {
     get estaVivo(): boolean {
         return this._estaVivo;
     }
+
     set estaVivo(value: boolean) {
         this._estaVivo = value;
     }
@@ -22,6 +23,7 @@ export class Soldado {
         objetivo.recibirDisparo();
         //el soldado dispara al objetivo
     }
+    
     recibirDisparo(): void {
         this._estaVivo = false;
         //el soldado muere al recibir un disparo
