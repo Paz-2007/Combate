@@ -1,7 +1,10 @@
+import type { Escudo } from "./escudo.js";
+
 export class Soldado {
     private _nombre: string;
     private _vida: number;
     private _estaVivo: boolean = true;
+    private _tieneEscudo: boolean = false;
 
     constructor(nombre: string) {
         this._nombre = nombre;
@@ -30,6 +33,13 @@ export class Soldado {
 
     }
 
+    tomarEscudo(escudo: Escudo): void {
+        this._tieneEscudo = true;
 
+        //el soldado toma un escudo
+
+        
+
+    }
 }
 
