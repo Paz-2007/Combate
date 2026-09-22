@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
 
-import { Soldado } from "../src/soldado.js";
+import { Soldado } from "../src/Soldado.js";
 import { Escudo } from "../src/escudo.js";
 
 
@@ -29,3 +29,5 @@ describe("Soldado"), () => {
         expect(soldado1.estaVivo).toBe(true); //el soldado 1 sigue vivo despues de recibir un disparo gracias al escudo
     }
 }
+
+
