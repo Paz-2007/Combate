@@ -1,5 +1,3 @@
-
-
 import { describe, expect, test } from "vitest";
 
 import {tanque} from "../src/tanque.js";

@@ -11,10 +11,9 @@ export class buque {
         this._vida =3;
         this._estaVivo = true;
     }
-
- get estaVivo(): boolean{
+    get estaVivo(): boolean{
     return this._estaVivo;
- }
+    }
 
  set estaVivo(value: boolean) {
     this._estaVivo = value;
@@ -30,11 +29,9 @@ export class buque {
             this._estaVivo = false;
         }
     }
-
     
     tomarEscudo(escudo: Escudo): void {
     this._tieneEscudo = true;
-    
     //el soldado toma un escudo
     }
 }

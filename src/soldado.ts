@@ -1,10 +1,13 @@
 import type { Escudo } from "./escudo.js";
+import type {Arma} from "../src//arma.js"; 
+
 
 export class Soldado {
     private _nombre: string;
     private _vida: number;
     private _estaVivo: boolean = true;
     private _tieneEscudo: boolean = false;
+    private _tenerArma: Arma | null = null;
 
     constructor(nombre: string) {
         this._nombre = nombre;
@@ -23,10 +26,12 @@ export class Soldado {
     }
     
     disparar(objetivo: Soldado): void {
-        objetivo.recibirDisparo();
-        //el soldado dispara al objetivo
+    if (this._tenerArma != null) {
+        if (this._tenerArma.disparar()) {
+            objetivo.recibirDisparo();
+        }
     }
-    
+}
     recibirDisparo(): void {
         this._estaVivo = false;
         //el soldado muere al recibir un disparo
@@ -37,9 +42,11 @@ export class Soldado {
         this._tieneEscudo = true;
 
         //el soldado toma un escudo
-
-        
-
     }
+
+     tomarArma(arma:Arma): void {
+        this._tenerArma= arma;
+    }
+   
 }
 

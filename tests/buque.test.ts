@@ -3,8 +3,8 @@ import { buque } from "../src/buques.js";
 import { Escudo } from "../src/escudo.js";
 
 describe("Buque"), () => {
-    test("Buque no muere cuando recibe un disparo gracias al escudo",) => {
-        var buque1 = new buque('Buque 1'); 
+    test("Buque no muere cuando recibe un disparo gracias al escudo",);  {
+         var buque1 = new buque('Buque 1'); 
         expect(buque1.estaVivo).toBe(true);
         var buque2 = new buque('Buque 2');
         expect(buque2.estaVivo).toBe(true);
