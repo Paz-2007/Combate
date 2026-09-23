@@ -25,13 +25,11 @@ export class Soldado {
         this._estaVivo = value;
     }
     
-    disparar(objetivo: Soldado): void {
-    if (this._tenerArma != null) {
-        if (this._tenerArma.disparar()) {
-            objetivo.recibirDisparo();
-        }
-    }
+  disparar(objetivo: Soldado): void {
+    this._tenerArma != null && this._tenerArma.disparar() && objetivo.recibirDisparo();
+    //el soldado dispara al objetivo si tiene un arma y municiones
 }
+
     recibirDisparo(): void {
         this._estaVivo = false;
         //el soldado muere al recibir un disparo

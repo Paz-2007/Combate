@@ -3,9 +3,11 @@ import { describe, expect, test } from "vitest";
 import { Soldado } from "../src/Soldado.js";
 import { Escudo } from "../src/escudo.js";
 import {Arma} from '../src/arma.js';
+import { Pistola } from "../src/pistola.js";
+import { Rifle } from "../src/rifle.js";
 
 describe("Soldado"), () => {
-    test("Soldado mmuere cuando recibe un disparo", () => {
+    test("Soldado mmuere cuando recibe un disparo de pistola", () => {
         var soldado1 = new Soldado("Soldado 1");
         expect(soldado1.estaVivo).toBe(true);
                 //se crea un soldado con nombre y vida inicial de 1
@@ -14,7 +16,25 @@ describe("Soldado"), () => {
         //se crea un soldado con nombre y vida inicial de 1
 
         
-        soldado2.tomarArma(new Arma(1));
+        soldado2.tomarArma(new Pistola());
+
+        soldado2.disparar(soldado1);
+        //el soldado 2 dispara al soldado 1
+        expect(soldado1.estaVivo).toBe(false);
+    });
+}
+
+describe("Soldado"), () => {
+    test("Soldado mmuere cuando recibe un disparo de rifle", () => {
+        var soldado1 = new Soldado("Soldado 1");
+        expect(soldado1.estaVivo).toBe(true);
+                //se crea un soldado con nombre y vida inicial de 1
+        var soldado2 = new Soldado("Soldado 2");
+        expect(soldado1.estaVivo).toBe(true);
+        //se crea un soldado con nombre y vida inicial de 1
+
+        
+        soldado2.tomarArma(new Rifle());
 
         soldado2.disparar(soldado1);
         //el soldado 2 dispara al soldado 1
